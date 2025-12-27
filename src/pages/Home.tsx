@@ -32,7 +32,7 @@ const Home: React.FC = () => {
                     </div>
 
                     <p className="text-gray-500 text-lg max-w-sm mx-auto leading-relaxed">
-                        MBTI×心理学で解き明かす、<br />
+                        16タイプ診断×心理学で解き明かす、<br />
                         あなたとパートナーの本当の「取扱説明書」。
                     </p>
                 </section>
