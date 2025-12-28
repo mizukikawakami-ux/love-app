@@ -96,7 +96,7 @@ const Analysis: React.FC = () => {
                                 }}
                             />
                             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-brand-sage text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg whitespace-nowrap z-20">
-                                {userType.id} TYPE
+                                {userType.name}
                             </div>
                         </div>
 
@@ -255,7 +255,7 @@ const Analysis: React.FC = () => {
                                                 onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/100?text=' + animal.id }}
                                             />
                                         </div>
-                                        <span className="text-[10px] font-bold text-gray-600">{animal.id}</span>
+                                        <span className="text-[10px] font-bold text-gray-600">{animal.name}</span>
                                     </button>
                                 ))}
                             </div>
