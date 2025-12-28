@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react";
 import Home from './pages/Home';
 import Question from './pages/Question';
 import Analysis from './pages/Analysis';
@@ -17,6 +18,7 @@ function App() {
         <Route path="/advice" element={<Advice />} />
         <Route path="/premium" element={<Premium />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
