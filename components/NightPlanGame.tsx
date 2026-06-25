@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { NIGHT_ACTIONS, type NightAction } from '../data/premium_content';
 import { Sparkles, Play, RefreshCw, Clock } from 'lucide-react';

@@ -1,12 +1,14 @@
-import React from 'react';
-import { Layout } from '../components/Layout';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Heart, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+'use client';
 
-const Home: React.FC = () => {
-    const navigate = useNavigate();
+import React from 'react';
+import { Layout } from '@/components/Layout';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { Heart, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+
+export default function Home() {
+    const router = useRouter();
 
     return (
         <Layout>
@@ -42,8 +44,8 @@ const Home: React.FC = () => {
                     <Button
                         size="lg"
                         fullWidth
-                        onClick={() => navigate('/question')}
-                        className="shadow-2xl shadow-brand-sage/40 text-lg font-bold py-8 bg-brand-sage hover:bg-brand-sage/90 border-none transition-all hover:scale-[1.02]"
+                        onClick={() => router.push('/question')}
+                        className="shadow-2xl shadow-brand-sage/40 text-lg font-bold py-8 bg-brand-sage hover:bg-brand-sage/90 border-none transition-all hover:scale-[1.02] text-white"
                     >
                         今すぐ診断を始める <ArrowRight className="ml-2" />
                     </Button>
@@ -71,7 +73,7 @@ const Home: React.FC = () => {
             </div>
         </Layout>
     );
-};
+}
 
 const FeatureCard: React.FC<{ icon: React.ReactNode, title: string, description: string }> = ({ icon, title, description }) => (
     <Card className="flex flex-col items-center text-center p-8 bg-white/60 backdrop-blur-md border border-brand-sage/10 hover:border-brand-sage/30 transition-colors shadow-sm hover:shadow-md">
@@ -82,5 +84,3 @@ const FeatureCard: React.FC<{ icon: React.ReactNode, title: string, description:
         <p className="text-sm text-gray-500 leading-relaxed indent-0">{description}</p>
     </Card>
 );
-
-export default Home;
